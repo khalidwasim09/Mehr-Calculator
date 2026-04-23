@@ -18,11 +18,11 @@ const ARTICLES = [
       'Understand the Quranic basis, purpose, and philosophy of Mehr — the obligatory bridal gift in Islamic marriage.',
   },
   {
-    href: '/learn/hanafi-rulings',
+    href: '/learn/madhab-rulings',
     icon: '🕌',
-    title: 'Hanafi Rulings on Mehr',
+    title: 'Rulings Across the 4 Madhabs',
     description:
-      'Detailed guide to Imam Abu Hanifa\'s rulings — minimums, Mehr al-Mithl, prompt vs. deferred, and the wife\'s rights.',
+      'Detailed guide to the rulings of Imam Abu Hanifa, Imam Malik, Imam Shafi\'i, and Imam Ahmad on Mehr minimums and conditions.',
   },
   {
     href: '/learn/sunnah-benchmarks',
