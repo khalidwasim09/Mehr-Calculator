@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-4) 0;
+  transition: all var(--transition-base);
+  background: rgba(6, 10, 20, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.navbar__logo {
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+
+.navbar__title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+
+.navbar__titleAccent {
+  color: var(--color-emerald-400);
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.navbar__link {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.navbar__link:hover {
+  color: var(--color-text-primary);
+}
+
+.navbar__link--active {
+  color: var(--color-emerald-400);
+}
+
+.navbar__cta {
+  margin-left: var(--space-4);
+}
+
+.navbar__mobile {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.navbar__mobileMenu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-6);
+  z-index: var(--z-sticky);
+  animation: fadeInDown 0.3s ease;
+}
+
+.navbar__mobileMenu--open {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.navbar__mobileLink {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .navbar__nav {
+    display: none;
+  }
+  
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__mobile {
+    display: block;
+  }
+}

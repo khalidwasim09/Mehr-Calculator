@@ -1,0 +1,153 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-32) var(--space-6) var(--space-16);
+}
+
+/* ── Geometric Background ── */
+.hero__pattern {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero__patternShape {
+  position: absolute;
+  border: 1px solid rgba(16, 185, 129, 0.06);
+  border-radius: var(--radius-lg);
+}
+
+.hero__patternShape:nth-child(1) {
+  width: 400px;
+  height: 400px;
+  top: 10%;
+  right: -5%;
+  transform: rotate(45deg);
+  animation: floatSlow 20s ease-in-out infinite;
+}
+
+.hero__patternShape:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  bottom: 15%;
+  left: -3%;
+  transform: rotate(30deg);
+  border-color: rgba(245, 158, 11, 0.05);
+  animation: floatSlow 25s ease-in-out infinite reverse;
+}
+
+.hero__patternShape:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  left: 15%;
+  transform: rotate(60deg);
+  animation: floatSlow 18s ease-in-out infinite;
+}
+
+.hero__patternShape:nth-child(4) {
+  width: 150px;
+  height: 150px;
+  bottom: 25%;
+  right: 20%;
+  transform: rotate(15deg);
+  border-color: rgba(245, 158, 11, 0.04);
+  animation: floatSlow 22s ease-in-out infinite reverse;
+}
+
+/* ── Content ── */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero__bismillah {
+  font-family: var(--font-arabic);
+  font-size: var(--text-2xl);
+  color: var(--color-gold-500);
+  margin-bottom: var(--space-8);
+  opacity: 0.8;
+}
+
+.hero__heading {
+  font-family: var(--font-display);
+  font-size: var(--text-7xl);
+  font-weight: 800;
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-6);
+  letter-spacing: var(--tracking-tight);
+}
+
+.hero__headingAccent {
+  background: linear-gradient(135deg, var(--color-emerald-300), var(--color-emerald-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-10);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Trust Bar ── */
+.hero__trust {
+  margin-top: var(--space-16);
+  display: flex;
+  gap: var(--space-8);
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+
+.hero__trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.hero__trustIcon {
+  color: var(--color-emerald-500);
+  font-size: var(--text-lg);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-24) var(--space-4) var(--space-12);
+    min-height: auto;
+  }
+  .hero__heading {
+    font-size: var(--text-4xl);
+  }
+  .hero__subtitle {
+    font-size: var(--text-base);
+  }
+  .hero__trust {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+}
